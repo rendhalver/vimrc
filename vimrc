@@ -40,13 +40,16 @@ set modelines=3   " number of modelines to read
 set tildeop       " case change with movement rather than single char
 
 set showmatch       " show matching brackets
-set matchtime=5     " how many tenths of a second to blink matching brackets for
+"set matchtime=5     " how many tenths of a second to blink matching brackets for
 
 set hlsearch    " highlight search on by default
 
 set noincsearch   " move curser as you type search terms
 set autoread            " auto read in files that have changed underneath
 set shellcmdflag=-lc  " set the ! shell to be a login shell to get at functions and aliases
+set cursorline
+set number
+set relativenumber
 
 " settings requiring the latest vim
 if version >= 703
@@ -63,16 +66,18 @@ endif
 nnoremap / /\v
 vnoremap / /\v
 cnoremap %s/ %s/\v
+set ignorecase
+set smartcase
 
 " map <space> to disable highlight easily
 nnoremap <silent><leader><space> :noh<cr>
 
 " window settings and maps
 nnoremap <leader>w :vnew<CR><C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h " move left one split
+nnoremap <C-j> <C-w>j " move down one split
+nnoremap <C-k> <C-w>k " move up one split
+nnoremap <C-l> <C-w>l " move right one split
 set nomousefocus        " focus does not follow mouse
 " set wh=1    " minimal number of lines used for the current window
 " set wmh=1     " minimal number of lines used for any window
@@ -173,13 +178,6 @@ nmap <Leader>' ysiw'
 " Paste mode
 nnoremap <C-E>  :silent! set invpaste<CR>
 set pastetoggle=<C-E>
-
-" current edge version stuff
-if v:version >= 703
-  set norelativenumber " number the file based on relative position, neat but distracting
-  set noundofile " this creates undo droppings
-endif
-
 
 " -------------------------------------
 " GNUPG plugin settings
