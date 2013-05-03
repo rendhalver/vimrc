@@ -48,14 +48,10 @@ set noincsearch   " move curser as you type search terms
 set autoread            " auto read in files that have changed underneath
 set shellcmdflag=-lc  " set the ! shell to be a login shell to get at functions and aliases
 set cursorline
-set number
-set relativenumber
-
-" settings requiring the latest vim
-if version >= 703
-  "set colorcolumn=80    " highlight the 80th column
-  set listchars=nbsp:¶,eol:¬,tab:>-,extends:»,precedes:«,trail:• " characters to use for 'specical' characters and non-printables
-endif
+"set number
+"set relativenumber
+"set colorcolumn=80    " highlight the 80th column
+set listchars=nbsp:¶,eol:¬,tab:>-,extends:»,precedes:«,trail:• " characters to use for 'specical' characters and non-printables
 
 
 " don't remove indents for comments
