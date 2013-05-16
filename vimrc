@@ -70,6 +70,7 @@ nnoremap <silent><leader><space> :noh<cr>
 
 " window settings and maps
 nnoremap <leader>w :vnew<CR><C-w>l
+nnoremap <leader>h :new<CR><C-w>l
 nnoremap <C-h> <C-w>h " move left one split
 nnoremap <C-j> <C-w>j " move down one split
 nnoremap <C-k> <C-w>k " move up one split
